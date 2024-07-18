@@ -35,23 +35,24 @@ The following is run with `./nn 0.1 1000 32 16`
 ### Log files and output 
 **Loss per 100 epochs (Terminal output)**
 
-![loss_per_100_epochs](readme_images/run_example.png)
+<img src="readme_images/run_example.png" alt="Alt text" width="300" height="200" />
 
 **test_output.txt snippet**
 
-![test_output_snippet](readme_images/test_output_example.png)
+<img src="readme_images/test_output_example.png" alt="Alt text" width="600" height="400" />
 
 **training_statistic.txt**
 
-![training_statistic](readme_images/training_statistics.png)
+<img src="readme_images/training_statistics.png" alt="Alt text" width="600" height="400" />
 
 ### Visualisation based on logged data (from matplotlib in python)
 
 **Loss per epoch**
 
-![loss_per_epoch](readme_images/loss.png)
+<img src="readme_images/loss.png" alt="Alt text" width="600" height="400" />
 
 **Test prediction visualisation**
 
-![test_prediction](readme_images/test_prediction.png)
+<img src="readme_images/test_prediction.png" alt="Alt text" width="600" height="400" />
+
 
