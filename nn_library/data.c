@@ -100,7 +100,7 @@ void get_actual_test_output(int* actual_values){
  * Write 12 images, actual and predicted labels to output file
  */
 int write_pred_and_test(int* predictions, int* actual_values){
-    FILE *file = fopen("test_output.txt", "w");
+    FILE *file = fopen("log/test_output.txt", "w");
     if (file == NULL) {
         perror("Error opening file");
         return 1;

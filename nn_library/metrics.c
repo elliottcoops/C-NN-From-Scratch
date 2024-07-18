@@ -46,7 +46,7 @@ void calculate_confusion_matrix(int* actual, int* predicted, int size, int confu
  * Write all metrics calculated to output file for further analysis
  */
 int write_metrics_to_output(float* loss_per_epoch, int num_elements, float accuracy, double cpu_time, int confusion_matrix[get_num_outputs()][get_num_outputs()], int epochs, float learning_rate){
-    FILE *file = fopen("training_statistics.txt", "w");
+    FILE *file = fopen("log/training_statistics.txt", "w");
     if (file == NULL) {
         perror("Error opening file");
         return 1;
