@@ -1,7 +1,14 @@
 # C-NN-FromScratch
-This repository contains a C program that trains a neural network using backpropagation on the MNIST dataset. It implements forward and backward propagation, weight updates, and evaluates performance with a confusion matrix, mean squared error (MSE) loss, and accuracy metrics.
+This repository contains a C program from scratch that trains a neural network using backpropagation on the MNIST dataset. It implements forward and backward propagation, weight updates, and evaluates performance with a confusion matrix, mean squared error (MSE) loss, and accuracy metrics.
 
 After running the program, it creates a log folder (if not already present). This folder logs CPU time, epoch-wise loss, and visualisations comparing actual and predicted values for easy interpretation.
+
+The codebase uses just four standard C libraries:
+
+1. stdio.h
+2. stdlib.h
+3. math.h
+4. string.h
 
 ## Code structure
 The code is structured as a library (in `nn_library`), with each component having its own header and C file. For example, neural network initialisation and creation are completely separate from training. This separation allows flexibility in the training process and enables multiple different networks to be trained in a single run.
