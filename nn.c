@@ -6,22 +6,31 @@
 #include "headers/nn_run.h"
 #include "headers/data.h"
 #include "headers/metrics.h"
-
-// Hyperparameters
-const float learning_rate = 0.1; 
-const int epochs = 1000;
+#include "headers/nn.h"
 
 int main(int argc, char** argv){
-    int architecture[] = {get_num_inputs(), 32, 16, get_num_outputs()}; // Set architecture
+    // Hyperparameters
+    float learning_rate; 
+    int epochs;
+    int layers = 2 + (argc - 3);
+    int* architecture  = (int*)calloc(layers, sizeof(int));
+    
+    // Logging information
     int confusion_matrix[get_num_outputs()][get_num_outputs()];
-    int* predictions = (int*)calloc(get_test_size(), sizeof(int));
-    int* actual_values = (int*)calloc(get_test_size(), sizeof(int));
-    int layers = sizeof(architecture)  / sizeof(int); // Find how many layers
-    Layer* neural_network = initialise_network(architecture, layers); // Initialise the neural network
     float accuracy;
     float loss_per_epoch[epochs];
     clock_t start, end;
     double cpu_time_used;
+
+    // Test/Prediction 
+    int* predictions = (int*)calloc(get_test_size(), sizeof(int));
+    int* actual_values = (int*)calloc(get_test_size(), sizeof(int));
+
+    // Neural network
+    Layer* neural_network = initialise_network(architecture, layers); 
+
+    // Read in (hyper)parameters for neural network
+    read_cmd_line_args(&learning_rate, &epochs, layers, architecture, argc, argv);
 
     // Load dataset
     load_dataset(); 
@@ -49,3 +58,21 @@ int main(int argc, char** argv){
 
     return 0;
 }
+
+/**
+ * Read in (hyper)parameters from the command line
+ */
+void read_cmd_line_args(float* lr, int* epochs, int layers, int* architecture, int num_args, char** args){
+    int architecture_size;
+    // Set learning rate and epochs
+    *lr = atof(args[1]);
+    *epochs = atoi(args[2]);
+
+    // Set architecture
+    architecture[0] = get_num_inputs();
+    architecture[layers-1] = get_num_outputs();
+    for (int i = 3; i < num_args; i++){
+        architecture[i-2] = atoi(args[i]);
+    }
+}
+

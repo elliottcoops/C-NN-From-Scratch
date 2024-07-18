@@ -107,8 +107,8 @@ int write_pred_and_test(int* predictions, int* actual_values){
     }
 
     // Write first 12 images with actual and predicted labels for displaying
-    for (int example = 0; example < 12; example++){
-        fprintf(file, "---test_example_%d---\n", example);
+    for (int example = 0; example < 144; example+=12){
+        fprintf(file, "---test_example_%d---\n", example+1);
         // Write image data
         fprintf(file, "image: [");
         for (int pixel = 0; pixel < get_num_inputs(); pixel++){
@@ -119,7 +119,7 @@ int write_pred_and_test(int* predictions, int* actual_values){
         fprintf(file, "actual: %d\n", actual_values[example]);
         // Write predicted value
         fprintf(file, "predicted: %d\n", predictions[example]);
-        fprintf(file, "---------------------\n");
+        fprintf(file, "---------------------\n\n");
     }
 
     return 0;
