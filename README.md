@@ -1,7 +1,7 @@
 # C-NN-FromScratch
-This repository contains a C program for training a neural network using backpropagation on the MNIST dataset. The code is designed to implement forward propagation, backward propagation, weight updates, and evaluate through a confusion matrix, loss (mse) and calculating accuracy.
+This repository contains a C program that trains a neural network using backpropagation on the MNIST dataset. It implements forward and backward propagation, weight updates, and evaluates performance with a confusion matrix, mean squared error (MSE) loss, and accuracy metrics.
 
-After running the executable, a `log` folder will be created (if it doesn't already exist). This folder will contain relevant data, including CPU time, loss per epoch, and images showing the actual and predicted values for visualisation.
+After running the program, it creates a log folder (if not already present). This folder logs CPU time, epoch-wise loss, and visualisations comparing actual and predicted values for easy interpretation.
 
 ## Code structure
 The code is structured as a library, with each component having its own header and C file. For example, neural network initialisation and creation are completely separate from training. This separation allows flexibility in the training process and enables multiple different networks to be trained in a single run.
@@ -32,14 +32,23 @@ Assuming you are `C-NN-FromScratch` directory
 ## Example training and output
 The following is run with `./nn 0.1 1000 32 16`
 
+### Log files and output 
 **Loss per 100 epochs (Terminal output)**
 
 ![loss_per_100_epochs](readme_images/run_example.png)
 
 **test_output.txt snippet**
 
-![loss_per_100_epochs](readme_images/test_output_example.png)
+![test_output_snippet](readme_images/test_output_example.png)
 
 **training_statistic.txt**
 
-![loss_per_100_epochs](readme_images/training_statistics.png)
+![training_statistic](readme_images/training_statistics.png)
+
+### Visualisation based on logged data
+**Loss per epoch**
+![loss_per_epoch]()
+
+**Test prediction visualisation**
+![test_prediction](test)
+
