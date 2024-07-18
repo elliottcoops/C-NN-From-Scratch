@@ -45,10 +45,13 @@ The following is run with `./nn 0.1 1000 32 16`
 
 ![training_statistic](readme_images/training_statistics.png)
 
-### Visualisation based on logged data
+### Visualisation based on logged data (from matplotlib in python)
+
 **Loss per epoch**
-![loss_per_epoch]()
+
+![loss_per_epoch](readme_images/loss.png)
 
 **Test prediction visualisation**
-![test_prediction](test)
+
+![test_prediction](readme_images/test_prediction.png)
 
