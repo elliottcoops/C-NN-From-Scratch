@@ -8,8 +8,8 @@
 #include "headers/metrics.h"
 
 // Hyperparameters
-const int epochs = 1000;
 const float learning_rate = 0.1; 
+const int epochs = 1000;
 
 int main(int argc, char** argv){
     int architecture[] = {get_num_inputs(), 32, 16, get_num_outputs()}; // Set architecture
