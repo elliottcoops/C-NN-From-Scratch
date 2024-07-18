@@ -14,6 +14,8 @@ The main components:
 - **nn_config.c** - Functions for allocating memory and initialising the neural network (neurons and weights).
 
 - **nn_run.c** - Functions for training and predicting (forwards and backwards propagation).
+
+- **nn.c** - Main function to create and train neural networks
  
 ## Requirements
 
@@ -28,6 +30,8 @@ Assuming you are `C-NN-FromScratch` directory
 2. Run using `./{exe_name} {learning_rate} {epochs} {hidden_layer_1} ... {hidden_layer_n}`
 
 3. Navigate to the log folder for training statistics
+
+4. Run each cell in `data_visualisation.ipynb` to see graphs (requires matplotlib and numpy) 
 
 ## Example training and output
 The following is run with `./nn 0.1 1000 32 16`
