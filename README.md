@@ -50,20 +50,20 @@ The following is run with `./nn 0.1 1000 32 16`
 
 **test_output.txt snippet**
 
-<img src="readme_images/test_output_example.png" alt="Alt text" width="600" height="400" />
+<img src="readme_images/test_output_example.png" alt="Alt text" width="500" height="300" />
 
 **training_statistic.txt**
 
-<img src="readme_images/training_statistics.png" alt="Alt text" width="600" height="400" />
+<img src="readme_images/training_statistics.png" alt="Alt text" width="400" height="300" />
 
 ### Visualisation based on logged data (from data_visualisation.ipynb)
 
 **Loss per epoch**
 
-<img src="readme_images/loss.png" alt="Alt text" width="600" height="400" />
+<img src="readme_images/loss.png" alt="Alt text" width="400" height="300" />
 
 **Test prediction visualisation**
 
-<img src="readme_images/test_prediction.png" alt="Alt text" width="600" height="400" />
+<img src="readme_images/test_prediction.png" alt="Alt text" width="400" height="300" />
 
 
