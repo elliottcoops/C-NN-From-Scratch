@@ -49,7 +49,7 @@ The following is run with `./nn 0.1 1000 32 16`
 
 <img src="readme_images/training_statistics.png" alt="Alt text" width="600" height="400" />
 
-### Visualisation based on logged data (from matplotlib in python)
+### Visualisation based on logged data (from data_visualisation.ipynb)
 
 **Loss per epoch**
 
