@@ -44,5 +44,8 @@ int main(int argc, char** argv){
     // Write metrics to output
     write_metrics_to_output(loss_per_epoch, epochs, accuracy, cpu_time_used, confusion_matrix, epochs, learning_rate);
 
+    // Write image, prediction and actual to output for visualisation
+    write_pred_and_test(predictions, actual_values);
+
     return 0;
 }

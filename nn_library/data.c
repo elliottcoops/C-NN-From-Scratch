@@ -97,6 +97,34 @@ void get_actual_test_output(int* actual_values){
 }
 
 /**
+ * Write 12 images, actual and predicted labels to output file
+ */
+int write_pred_and_test(int* predictions, int* actual_values){
+    FILE *file = fopen("test_output.txt", "w");
+    if (file == NULL) {
+        perror("Error opening file");
+        return 1;
+    }
+
+    // Write first 12 images with actual and predicted labels for displaying
+    for (int example = 0; example < 12; example++){
+        fprintf(file, "---test_example_%d---\n", example);
+        // Write image data
+        fprintf(file, "image: [");
+        for (int pixel = 0; pixel < get_num_inputs(); pixel++){
+            if (pixel  == get_num_inputs()-1){ fprintf(file, "%f]\n", test_X[pixel][example]);}
+            else{ fprintf(file, "%f, ", test_X[pixel][example]);}
+        }
+        // Write actual value
+        fprintf(file, "actual: %d\n", actual_values[example]);
+        // Write predicted value
+        fprintf(file, "predicted: %d\n", predictions[example]);
+        fprintf(file, "---------------------\n");
+    }
+
+    return 0;
+}
+/**
  * Load the data from the csv file into the dataset
  * Data is columns of vectors with the data
  */

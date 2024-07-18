@@ -15,6 +15,7 @@ int get_train_size();
 int get_dataset_size();
 int get_test_size();
 void get_actual_test_output(int* actual_values);
+int write_pred_and_test(int* predictions, int* actual_values);
 void load_file_data(const char filename[], float max_value, int max_row_length, int rows, int cols, float arr[rows][cols]);
 
 #endif
