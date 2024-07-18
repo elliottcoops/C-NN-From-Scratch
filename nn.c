@@ -14,7 +14,8 @@ int main(int argc, char** argv){
     int epochs;
     int layers = 2 + (argc - 3);
     int* architecture  = (int*)calloc(layers, sizeof(int));
-    
+    read_cmd_line_args(&learning_rate, &epochs, layers, architecture, argc, argv); // Read in variables from cmdl
+
     // Logging information
     int confusion_matrix[get_num_outputs()][get_num_outputs()];
     float accuracy;
@@ -28,9 +29,6 @@ int main(int argc, char** argv){
 
     // Neural network
     Layer* neural_network = initialise_network(architecture, layers); 
-
-    // Read in (hyper)parameters for neural network
-    read_cmd_line_args(&learning_rate, &epochs, layers, architecture, argc, argv);
 
     // Load dataset
     load_dataset(); 
@@ -63,7 +61,6 @@ int main(int argc, char** argv){
  * Read in (hyper)parameters from the command line
  */
 void read_cmd_line_args(float* lr, int* epochs, int layers, int* architecture, int num_args, char** args){
-    int architecture_size;
     // Set learning rate and epochs
     *lr = atof(args[1]);
     *epochs = atoi(args[2]);
