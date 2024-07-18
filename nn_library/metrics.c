@@ -56,7 +56,7 @@ int write_metrics_to_output(float* loss_per_epoch, int num_elements, float accur
     fprintf(file, "---POST_TRAINING_STATISTICS---");
     fprintf(file, "\naccuracy: %.2f%%\n", accuracy*100); // Write accuracy
      // Write loss
-    fprintf(file, "loss_per_epoch = [");
+    fprintf(file, "loss_per_epoch: [");
     for (int i = 0; i < num_elements; i++) {
         if (i==num_elements-1){
             fprintf(file, "%f]\n", loss_per_epoch[i]);
