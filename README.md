@@ -4,7 +4,7 @@ This repository contains a C program that trains a neural network using backprop
 After running the program, it creates a log folder (if not already present). This folder logs CPU time, epoch-wise loss, and visualisations comparing actual and predicted values for easy interpretation.
 
 ## Code structure
-The code is structured as a library, with each component having its own header and C file. For example, neural network initialisation and creation are completely separate from training. This separation allows flexibility in the training process and enables multiple different networks to be trained in a single run.
+The code is structured as a library (in `nn_library`), with each component having its own header and C file. For example, neural network initialisation and creation are completely separate from training. This separation allows flexibility in the training process and enables multiple different networks to be trained in a single run.
 
 The main components: 
 - **data.c** - Functions for loading and accessing the dataset, test and training sets which is loaded at the start of the program based on the path set. 
