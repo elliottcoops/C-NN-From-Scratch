@@ -1,4 +1,4 @@
-# C-NN-FromScratch
+# C-NN-From-Scratch
 
 ## About
 This repository contains a C program from scratch that trains a neural network on the MNIST dataset. It implements forward and backward propagation, weight updates, and evaluates performance with a confusion matrix, mean squared error (MSE) loss, and accuracy metrics.
